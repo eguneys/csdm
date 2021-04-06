@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "sourceMap": true,
+    "strict": true,
+    "declaration": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "module": "es6",
+    "target": "es5",
+    "lib": ["DOM", "es2019"]
+  }
+}

@@ -1,0 +1,23 @@
+.csdm {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+.content {
+  flex: 0 0 100%;
+  overflow-y: auto;
+}
+
+.hover-board, .board {
+  width: calc(50vmin - 20px);
+  aspect-ratio: 1/1;
+}
+
+.board {
+  position: relative;
+}
+
+.hover-board {
+  position: absolute;
+}

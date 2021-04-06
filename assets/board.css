@@ -1,0 +1,116 @@
+:root {
+  --md-coord-color-black:#ED7272;
+  --md-coord-color-white:#E8E9B7;
+}
+
+md-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+md-wrap coords {
+  position: absolute;
+  display: flex;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+md-wrap coords.ranks {
+  right: 0;
+  top: 0;
+  flex-flow: column-reverse;
+  height: 100%;
+  width: .8em;
+}
+
+md-wrap coords.ranks.black {
+  flex-flow: column;
+}
+
+md-wrap coords.files {
+  bottom: 0;
+  left: 0;
+  flex-flow: row;
+  width: 100%;
+  height: 1.4em;
+  padding-left: 4px;
+}
+
+md-wrap coords.files.black {
+  flex-flow: row-reverse;
+}
+
+md-wrap coords coord {
+  flex: 1 1 auto;
+}
+
+.white.files coord:nth-child(2n+1),
+.white.ranks coord:nth-child(2n),
+.black.files coord:nth-child(2n),
+.black.ranks coord:nth-child(2n+1) {
+  color: var(--md-coord-color-white);
+}
+
+.white.files coord:nth-child(2n),
+.white.ranks coord:nth-child(2n+1),
+.black.files coord:nth-child(2n+1),
+.black.ranks coord:nth-child(2n) {
+  color: var(--md-coord-color-black);
+}
+
+@media (min-width: 320px) {
+  coords {
+  font-size: calc(9px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+md-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('./pink-pyramid.png');
+  user-select: none;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+md-board square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5%;
+  height: 12.5%;
+  pointer-events: none;
+}
+
+md-board square.last-move {
+  will-change: transform;
+  background-color: rgba(155, 199, 0, 0.41);
+}
+
+md-board piece {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12.5%;
+  height: 12.5%;
+  background-size: cover;
+  z-index: 2;
+  will-change: transform;
+  pointer-events: none;
+}
+
+md-wrap svg {
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.6;
+}

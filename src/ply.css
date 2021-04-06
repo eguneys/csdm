@@ -1,0 +1,24 @@
+.hover-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.hover-board::before {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  content: '';
+  z-index: 4;
+  background: white;
+  transition: width .5s;
+}
+
+.hidden.hover-board::before {
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}

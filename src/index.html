@@ -1,0 +1,44 @@
+<html>
+
+  <head>
+    <title> kcapeW </title>
+
+    <link rel="shortcut icon" href="#">
+
+    <style>
+
+     html, body {
+         margin: 0;
+         padding: 0;
+         background: black;
+         color: #bababa;
+     }
+
+     section {
+         background: #2a2a2a;
+     }
+     
+    </style>
+
+  </head>
+
+  <body>
+
+    <section>
+      <div class='wrap'>
+        <div id="app"></div>
+      </div>
+    </section>
+    <script>
+
+     window.addEventListener('DOMContentLoaded', () => {
+       kcapeW.default(document.getElementById('app'), {
+         md: kcapeW.fixtures.kingsgambit[0],
+         onClick: console.log
+       });
+     });
+     
+    </script>
+
+  </body>
+</html>
