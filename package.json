@@ -1,7 +1,7 @@
 {
-  "name": "kcapew",
+  "name": "csdm",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
     "watch": "tsc-watch",

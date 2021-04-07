@@ -76,8 +76,8 @@ export default class Ctrl {
 
     let vbBounds = this.vBBounds();
     if (vbBounds) {
-      res[0] += vbBounds.left - this.csBounds().left;
-      res[1] += vbBounds.top - this.csBounds().top;
+      res[0] += vbBounds.left;
+      res[1] += vbBounds.top;
     } else {
       let offBounds = $elm.getBoundingClientRect();
       if (offBounds.left - this.csBounds().left < this.csBounds().width / 2) {
