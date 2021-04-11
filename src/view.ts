@@ -39,8 +39,18 @@ export function dMap(ctrl: Ctrl, builder: l.Builder): DisectMap<VNodeS> {
     oneTurn(turn: string) {
       return h('strong.oneturn', turn);
     },
-    glyphs() {
-      return [];
+    glyphs(moveGlyph?: string, posGlyph?: string, obsGlyph?: string) {
+      let res = [];
+      if (moveGlyph) {
+        res.push(h('span.movegf', moveGlyph));
+      }
+      if (posGlyph) {
+        res.push(h('span.posgf', posGlyph));
+      }
+      if (obsGlyph) {
+        res.push(h('span.obsgf', obsGlyph));
+      }
+      return res;
     },
     expandCode(_: VNodeS) {
       return [_, ' '];
@@ -97,12 +107,12 @@ function vMove(ctrl: Ctrl, builder: l.Builder) {
   return (ply: number, asan: VNodeS, aglyphs: Array<VNodeS>, line: string, pline?: string) => {
     let move = builder.plyMove(line, ply),
     err = builder.plyErr(line, ply);
-
-    let attrs: any = {};
+    let props: any = {},
+    dataset: any = {};
 
     if (err.length > 0) {
-      attrs['data-error'] = err[0];
-      attrs['title'] = err[0];
+      dataset['error'] = err[0];
+      props['title'] = err[0];
     }
 
     return h('div.move', {
@@ -128,8 +138,9 @@ function vMove(ctrl: Ctrl, builder: l.Builder) {
           });
         }
       },
-      ...attrs
-    }, [h('span.san', move?.san) || asan,
+      dataset,
+      props
+    }, [move?.san ? h('span.san', move.san) : asan,
         ...aglyphs]);
   };
 }
@@ -151,7 +162,7 @@ function vHover(ctrl: Ctrl) {
       insert(vnode) {
 
         ctrl.setHBounds(vnode.elm as Element);
-        
+
         ctrl.setHoverSS(ssehC(vnode.elm as Element, {
           fen: view?.after.fen,
           lastMove: view?.uci

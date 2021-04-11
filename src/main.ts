@@ -1,5 +1,7 @@
 import { VNode,
          init,
+         datasetModule,
+         propsModule,
          classModule,
          styleModule } from 'snabbdom';
 
@@ -9,6 +11,8 @@ import Ctrl from './ctrl';
 import Api from './api';
 
 const patch = init([
+  datasetModule,
+  propsModule,
   styleModule,
   classModule]);
 

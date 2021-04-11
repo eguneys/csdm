@@ -1,12 +1,54 @@
 export const debug = `
-<initial 11. Ng5> !
+<initial rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1>
+
+<initial 1. e4 e5 2. f4 exf4 3. Nf3 g5 4. d4 g4 5. Ne5!?>
+
+<initial 5... Qh4+>
+
+<initial 6. g3 fxg3 7. Qxg4>
+
+ae) <ae...Qxg4 initial 7... Qxg4>
+
+<ae...Qxg4 8. Nxg4>
+
+<ae...Qxg4 8... d5>
+
+<ae...Qxg4 9. Ne3 dxe4 10. hxg3 Nc6 11. c3>
+
+o) <o...g2 initial 7... g2+>
+
+<o...g2 8. Qxh4 gxh1=Q>
+
+o1) <o1...Nxf7 o...g2 9. Nxf7?!>
+
+<o1...Nxf7 9... Be7!>
+
+<o1...Nxf7 10. Qh5>
+
+<o1...Nxf7 10... Qxe4+ 11. Kd1 Qxd4+ 12. Bd2 c6!>
+
+<o1...Nxf7 13. Nxh8+>
+
+<o1...Nxf7 13... Kd8 14. Qxh7 Qg1⩱>
+
+o2) <o2...Nc3 o...g2 9. Nc3!>
+
+o21) <o21...Bb4 o...g2 9... Bb4?>
+
+o22) <o22...d6 o...g2 9... d6?!>
+
+o23) <o23...Be7 o...g2 9... Be7?!>
+
+o24) <o24...h6 o...g2 9... h6>
+
+o25) <o25...Nc6 o...g2 9... Nc6! N >
 `;
 
 export const content = `
  <initial rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1> 
  <initial 1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. Bc4> 
 =initial 11
- <initial 6... d5> 
+ <initial 6... d5!!> 
  <initial 7. exd5 Bg7> 
  <initial 8. d4> 
  A. <Nxd5 initial 8... Nxd5 9. Nc3 Nxc3 10. Bxf7+ Kf8 11. bxc3 Bxe5 12. Bb3 Bd6 13. O-O Qxh4 14. Bxf4 Bxf4 15. Rxf4+ Ke8> ∞
@@ -36,7 +78,7 @@ export const kingsgambit = [
   `
 <initial rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1>
 
-<initial 1. e4 e5 2. f4 exf4 3. Nf3 g5 4. h4 g4 5. Ne5 Nf6 6. Bc4 d5 7. exd5 Bd6 8. d4 Nh5 9. Nc3 O-O 10. Ne4 f5>
+<initial 1. e4 e5 2. f4 exf4 3. Nf3!! g5 4. h4 g4 5. Ne5 Nf6 6. Bc4 d5 7. exd5 Bd6 8. d4 Nh5 9. Nc3 O-O 10. Ne4 f5>
 
 
 <initial 11. Ng5> !

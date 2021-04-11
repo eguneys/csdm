@@ -18,7 +18,7 @@ export type DisectMap<A> = {
   zeroTurn: StringToA<A>,
   oneTurn: StringToA<A>,
   expandCode: (_: A) => Array<A>,
-  glyphs: () => Array<A>,
+  glyphs: (move?: string, pos?: string, obs?: string) => Array<A>,
   board: (ply: number, line: string) => A,
   move: (ply: number, asan: A, aglyphs: Array<A>, line: string, pline?: string) => A
 }
@@ -53,7 +53,7 @@ export class Disect<A> {
   }
 
   glyphs({moveGlyph, posGlyph, obsGlyph }: mt.MPOGlyphs) {
-    return this.d.glyphs();
+    return this.d.glyphs(moveGlyph, posGlyph, obsGlyph);
   }
 
   san(sanWithCastles: mt.SanWithCastles) {

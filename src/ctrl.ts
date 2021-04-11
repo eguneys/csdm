@@ -46,6 +46,7 @@ export default class Ctrl {
 
   md(md: string) {
     let mc = chers(md);
+    
     if (mc) {
       this.mcline = [mc, codes(mc)];
     }
